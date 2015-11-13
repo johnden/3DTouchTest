@@ -37,6 +37,9 @@
         cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     cell.textLabel.text=[NSString stringWithFormat:@"%@",@(indexPath.row)];
+    
+    
+    //设置浮起的View
     if ([UIDevice currentDevice].systemVersion.floatValue>=9.0) {
         [self registerForPreviewingWithDelegate:self sourceView:cell];
     }
