@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "DetailViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UIViewControllerPreviewingDelegate>
 @property (nonatomic,strong)UITableView * tableView;
 @end
@@ -22,9 +22,7 @@
     [self.view addSubview:_tableView];
     
     
-    if ([UIDevice currentDevice].systemVersion.floatValue>=9.0) {
-        [self registerForPreviewingWithDelegate:self sourceView:self.view];
-    }
+   
 
 }
 
@@ -32,24 +30,6 @@
     return 10;
 }
 
-//#if __IPHONE_OS_VERSION_MAX_ALLOWED >=
-
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
--(UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)context viewControllerForLocation:(CGPoint)location{
-    UIViewController* childVC= [[UIViewController alloc] init];
-    childVC.preferredContentSize = CGSizeMake(00, 300);
-    
-    CGRect rect =CGRectMake(10, location.y-10, self.view.frame.size.width-20, 200);
-    context.sourceRect=rect;
-    return childVC;
-    
-}
-
--(void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit{
-    [self showViewController:viewControllerToCommit sender:self];
-}
-
-#endif
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -57,14 +37,42 @@
         cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     cell.textLabel.text=[NSString stringWithFormat:@"%@",@(indexPath.row)];
+    if ([UIDevice currentDevice].systemVersion.floatValue>=9.0) {
+        [self registerForPreviewingWithDelegate:self sourceView:cell];
+    }
     return cell;
 }
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    DetailViewController* childVC= [[DetailViewController alloc] init];
+    [self presentViewController:childVC animated:YES completion:nil];
+    
 }
+
+
+//iOS 9.0以上才执行😂
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
+-(UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)context viewControllerForLocation:(CGPoint)location{
+    DetailViewController* childVC= [[DetailViewController alloc] init];
+    childVC.preferredContentSize = CGSizeMake(00, 300);
+    
+    CGRect rect =CGRectMake(0,0, self.view.frame.size.width, 44);
+    context.sourceRect=rect;
+    return childVC;
+    
+}
+
+-(void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit{
+    //[self showViewController:viewControllerToCommit sender:self];
+    
+    [self presentViewController:viewControllerToCommit animated:YES completion:nil];
+}
+
+#endif
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

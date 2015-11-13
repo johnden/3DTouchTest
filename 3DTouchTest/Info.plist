@@ -4,17 +4,6 @@
 <dict>
 	<key>Application</key>
 	<string></string>
-    <key>UIApplicationShortcutItems</key>
-    <array>
-    <dict>
-    <key>UIApplicationShortcutItemIconType</key>
-    <string>UIApplicationShortcutIconTypeShare</string>
-    <key>UIApplicationShortcutItemTitle</key>
-    <string>Share</string>
-    <key>UIApplicationShortcutItemType</key>
-    <string>-11.UITouchText.share</string>
-    </dict>
-    </array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -35,6 +24,17 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeShare</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Share</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>-11.UITouchText.share</string>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

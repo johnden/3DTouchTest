@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50121CC71BF5C5700071A5A7 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50121CC51BF5C5700071A5A7 /* DetailViewController.m */; };
+		50121CC81BF5C5700071A5A7 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50121CC61BF5C5700071A5A7 /* DetailViewController.xib */; };
 		9E3412C11BDFC7FD006AB206 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3412C01BDFC7FD006AB206 /* main.m */; };
 		9E3412C41BDFC7FD006AB206 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3412C31BDFC7FD006AB206 /* AppDelegate.m */; };
 		9E3412C71BDFC7FD006AB206 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3412C61BDFC7FD006AB206 /* ViewController.m */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50121CC41BF5C5700071A5A7 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		50121CC51BF5C5700071A5A7 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		50121CC61BF5C5700071A5A7 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		9E3412BC1BDFC7FD006AB206 /* 3DTouchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTouchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E3412C01BDFC7FD006AB206 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9E3412C21BDFC7FD006AB206 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,6 +112,9 @@
 				9E3412C31BDFC7FD006AB206 /* AppDelegate.m */,
 				9E3412C51BDFC7FD006AB206 /* ViewController.h */,
 				9E3412C61BDFC7FD006AB206 /* ViewController.m */,
+				50121CC41BF5C5700071A5A7 /* DetailViewController.h */,
+				50121CC51BF5C5700071A5A7 /* DetailViewController.m */,
+				50121CC61BF5C5700071A5A7 /* DetailViewController.xib */,
 				9E3412C81BDFC7FD006AB206 /* Main.storyboard */,
 				9E3412CE1BDFC7FD006AB206 /* Assets.xcassets */,
 				9E3412D01BDFC7FD006AB206 /* LaunchScreen.storyboard */,
@@ -250,6 +258,7 @@
 				9E3412D21BDFC7FD006AB206 /* LaunchScreen.storyboard in Resources */,
 				9E3412CF1BDFC7FD006AB206 /* Assets.xcassets in Resources */,
 				9E3412CA1BDFC7FD006AB206 /* Main.storyboard in Resources */,
+				50121CC81BF5C5700071A5A7 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50121CC71BF5C5700071A5A7 /* DetailViewController.m in Sources */,
 				9E3412C71BDFC7FD006AB206 /* ViewController.m in Sources */,
 				9E3412C41BDFC7FD006AB206 /* AppDelegate.m in Sources */,
 				9E3412CD1BDFC7FD006AB206 /* _DTouchTest.xcdatamodeld in Sources */,
@@ -349,6 +359,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaoliang Wu (HSN9AUC7LQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -392,6 +403,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaoliang Wu (HSN9AUC7LQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -420,7 +432,7 @@
 				INFOPLIST_FILE = 3DTouchTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "gentlemen.-DTouchTest";
+				PRODUCT_BUNDLE_IDENTIFIER = "-QDP725B66.cn.56truck.3dtouch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -430,10 +442,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaoliang Wu (HSN9AUC7LQ)";
 				INFOPLIST_FILE = 3DTouchTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "gentlemen.-DTouchTest";
+				PRODUCT_BUNDLE_IDENTIFIER = "-QDP725B66.cn.56truck.3dtouch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
